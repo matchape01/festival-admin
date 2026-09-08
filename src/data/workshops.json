@@ -1,0 +1,56 @@
+{
+  "workshops": [
+    {
+      "id": "w1",
+      "name": "Atelier Yoga",
+      "description": "Session de yoga matinale pour débuter la journée zen",
+      "animators": ["1"],
+      "category": "Wellness",
+      "capacity": 30,
+      "logistics": {
+        "equipment": ["Mats", "Speaker", "Cushions"],
+        "specialNeeds": "Quiet room, AC, Soft lighting"
+      },
+      "status": "Confirmed"
+    },
+    {
+      "id": "w2",
+      "name": "Atelier Danse Moderne",
+      "description": "Découvrez les mouvements de la danse contemporaine",
+      "animators": ["3"],
+      "category": "Arts",
+      "capacity": 25,
+      "logistics": {
+        "equipment": ["Sound system", "Dance floor"],
+        "specialNeeds": "Large space, Good ventilation"
+      },
+      "status": "Confirmed"
+    },
+    {
+      "id": "w3",
+      "name": "Atelier Cuisine",
+      "description": "Préparation de plats traditionnels avec un chef local",
+      "animators": ["1", "3"],
+      "category": "Food",
+      "capacity": 20,
+      "logistics": {
+        "equipment": ["Kitchen equipment", "Tables", "Chairs"],
+        "specialNeeds": "Kitchen access, Fire extinguisher"
+      },
+      "status": "Planned"
+    },
+    {
+      "id": "w4",
+      "name": "Atelier Musique",
+      "description": "Initiation à la percussion africaine",
+      "animators": ["2"],
+      "category": "Music",
+      "capacity": 40,
+      "logistics": {
+        "equipment": ["Percussion instruments", "Amplifier"],
+        "specialNeeds": "Soundproof room if possible"
+      },
+      "status": "Confirmed"
+    }
+  ]
+}

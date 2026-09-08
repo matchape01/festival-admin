@@ -1,0 +1,42 @@
+{
+  "people": [
+    {
+      "id": "1",
+      "name": "Alice Martin",
+      "email": "alice@festival.com",
+      "phone": "+33 6 12 34 56 78",
+      "roles": ["Animator"]
+    },
+    {
+      "id": "2",
+      "name": "Bob Dupont",
+      "email": "bob@festival.com",
+      "phone": "+33 6 87 65 43 21",
+      "roles": ["Volunteer", "Translator"]
+    },
+    {
+      "id": "3",
+      "name": "Claire Rousseau",
+      "email": "claire@festival.com",
+      "phone": "+33 6 55 44 33 22",
+      "roles": ["Animator", "Staff"]
+    },
+    {
+      "id": "4",
+      "name": "David Moreau",
+      "email": "david@festival.com",
+      "phone": "+33 6 11 22 33 44",
+      "roles": ["Helper"]
+    }
+  ],
+  "roles": [
+    "Animator",
+    "Volunteer",
+    "Translator",
+    "Helper",
+    "Angel",
+    "Colibri",
+    "Staff",
+    "Admin"
+  ]
+}

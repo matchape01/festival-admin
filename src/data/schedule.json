@@ -1,0 +1,69 @@
+{
+  "schedule": [
+    {
+      "workshopId": "w1",
+      "startTime": "2026-09-15T09:00:00",
+      "endTime": "2026-09-15T10:30:00",
+      "room": "Room A"
+    },
+    {
+      "workshopId": "w2",
+      "startTime": "2026-09-15T11:00:00",
+      "endTime": "2026-09-15T12:30:00",
+      "room": "Room B"
+    },
+    {
+      "workshopId": "w3",
+      "startTime": "2026-09-15T14:00:00",
+      "endTime": "2026-09-15T16:00:00",
+      "room": "Kitchen"
+    },
+    {
+      "workshopId": "w4",
+      "startTime": "2026-09-15T16:30:00",
+      "endTime": "2026-09-15T18:00:00",
+      "room": "Room C"
+    },
+    {
+      "workshopId": "w1",
+      "startTime": "2026-09-16T10:00:00",
+      "endTime": "2026-09-16T11:30:00",
+      "room": "Room B"
+    },
+    {
+      "workshopId": "w2",
+      "startTime": "2026-09-16T14:00:00",
+      "endTime": "2026-09-16T15:30:00",
+      "room": "Room A"
+    },
+    {
+      "workshopId": "w3",
+      "startTime": "2026-09-16T09:00:00",
+      "endTime": "2026-09-16T11:00:00",
+      "room": "Kitchen"
+    },
+    {
+      "workshopId": "w4",
+      "startTime": "2026-09-16T15:30:00",
+      "endTime": "2026-09-16T17:00:00",
+      "room": "Room C"
+    },
+    {
+      "workshopId": "w1",
+      "startTime": "2026-09-17T09:00:00",
+      "endTime": "2026-09-17T10:00:00",
+      "room": "Room C"
+    },
+    {
+      "workshopId": "w2",
+      "startTime": "2026-09-17T11:00:00",
+      "endTime": "2026-09-17T12:30:00",
+      "room": "Room A"
+    }
+  ],
+  "rooms": ["Room A", "Room B", "Room C", "Kitchen"],
+  "festivalDates": {
+    "start": "2026-09-15",
+    "end": "2026-09-17"
+  }
+}
