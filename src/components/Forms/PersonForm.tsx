@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { X } from 'lucide-react';
-import type { Person } from '../../types';
+import type { Person, Role } from '../../types';
 
 interface PersonFormProps {
   person?: Person | null;
-  roles: string[];
+  roles: Role[];
   onSubmit: (data: any) => void;
   onCancel: () => void;
 }
@@ -25,12 +25,12 @@ export function PersonForm({ person, roles, onSubmit, onCancel }: PersonFormProp
     }
   };
 
-  const toggleRole = (role: string) => {
+  const toggleRole = (roleId: string) => {
     setFormData(prev => ({
       ...prev,
-      roles: prev.roles.includes(role)
-        ? prev.roles.filter(r => r !== role)
-        : [...prev.roles, role]
+      roles: prev.roles.includes(roleId)
+        ? prev.roles.filter(r => r !== roleId)
+        : [...prev.roles, roleId]
     }));
   };
 
@@ -98,14 +98,14 @@ export function PersonForm({ person, roles, onSubmit, onCancel }: PersonFormProp
           </label>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
             {roles.map(role => (
-              <label key={role} className="flex items-center gap-2 cursor-pointer">
+              <label key={role.id} className="flex items-center gap-2 cursor-pointer">
                 <input
                   type="checkbox"
-                  checked={formData.roles.includes(role)}
-                  onChange={() => toggleRole(role)}
+                  checked={formData.roles.includes(role.id)}
+                  onChange={() => toggleRole(role.id)}
                   className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                 />
-                <span className="text-sm text-gray-700">{role}</span>
+                <span className="text-sm text-gray-700">{role.fr}</span>
               </label>
             ))}
           </div>

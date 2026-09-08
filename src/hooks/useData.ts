@@ -41,7 +41,28 @@ export function useResources() {
     }));
   };
 
-  return { data, updatePerson, addPerson, deletePerson };
+  const addRole = (role: any) => {
+    setData(prev => ({
+      ...prev,
+      roles: [...prev.roles, role]
+    }));
+  };
+
+  const updateRole = (id: string, updatedRole: any) => {
+    setData(prev => ({
+      ...prev,
+      roles: prev.roles.map(r => r.id === id ? { ...r, ...updatedRole } : r)
+    }));
+  };
+
+  const deleteRole = (id: string) => {
+    setData(prev => ({
+      ...prev,
+      roles: prev.roles.filter(r => r.id !== id)
+    }));
+  };
+
+  return { data, updatePerson, addPerson, deletePerson, addRole, updateRole, deleteRole };
 }
 
 export function useWorkshops() {

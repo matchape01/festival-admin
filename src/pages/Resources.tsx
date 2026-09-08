@@ -2,10 +2,11 @@ import { useState } from 'react';
 import { useResources } from '../hooks/useData';
 import { Plus, Trash2, Edit, Download } from 'lucide-react';
 import { PersonForm } from '../components/Forms/PersonForm';
+import { RolesManager } from '../components/Resources/RolesManager';
 import { exportPeopleAsCSV, downloadCSV } from '../utils/csv';
 
 export function Resources() {
-  const { data, addPerson, updatePerson, deletePerson } = useResources();
+  const { data, addPerson, updatePerson, deletePerson, addRole, updateRole, deleteRole } = useResources();
   const [showForm, setShowForm] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
 
@@ -20,6 +21,11 @@ export function Resources() {
   };
 
   const editingPerson = editingId ? data.people.find(p => p.id === editingId) : null;
+
+  const getRoleLabel = (roleId: string) => {
+    const role = data.roles.find(r => r.id === roleId);
+    return role?.fr || roleId;
+  };
 
   return (
     <div className="space-y-6">
@@ -50,6 +56,15 @@ export function Resources() {
             Ajouter une personne
           </button>
         </div>
+      </div>
+
+      <div className="bg-white rounded-lg shadow p-6">
+        <RolesManager
+          roles={data.roles}
+          onAddRole={addRole}
+          onUpdateRole={updateRole}
+          onDeleteRole={deleteRole}
+        />
       </div>
 
       {(showForm || editingPerson) && (
@@ -86,9 +101,9 @@ export function Resources() {
                 <td className="px-6 py-4 text-sm text-gray-500">{person.phone}</td>
                 <td className="px-6 py-4 text-sm">
                   <div className="flex flex-wrap gap-1">
-                    {person.roles.map(role => (
-                      <span key={role} className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
-                        {role}
+                    {person.roles.map(roleId => (
+                      <span key={roleId} className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
+                        {getRoleLabel(roleId)}
                       </span>
                     ))}
                   </div>

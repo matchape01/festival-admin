@@ -5,38 +5,38 @@
       "name": "Alice Martin",
       "email": "alice@festival.com",
       "phone": "+33 6 12 34 56 78",
-      "roles": ["Animator"]
+      "roles": ["animator"]
     },
     {
       "id": "2",
       "name": "Bob Dupont",
       "email": "bob@festival.com",
       "phone": "+33 6 87 65 43 21",
-      "roles": ["Volunteer", "Translator"]
+      "roles": ["volunteer", "translator"]
     },
     {
       "id": "3",
       "name": "Claire Rousseau",
       "email": "claire@festival.com",
       "phone": "+33 6 55 44 33 22",
-      "roles": ["Animator", "Staff"]
+      "roles": ["animator", "staff"]
     },
     {
       "id": "4",
       "name": "David Moreau",
       "email": "david@festival.com",
       "phone": "+33 6 11 22 33 44",
-      "roles": ["Helper"]
+      "roles": ["helper"]
     }
   ],
   "roles": [
-    "Animator",
-    "Volunteer",
-    "Translator",
-    "Helper",
-    "Angel",
-    "Colibri",
-    "Staff",
-    "Admin"
+    { "id": "animator", "fr": "Animateur", "en": "Animator" },
+    { "id": "volunteer", "fr": "Bénévole", "en": "Volunteer" },
+    { "id": "translator", "fr": "Traducteur", "en": "Translator" },
+    { "id": "helper", "fr": "Assistant", "en": "Helper" },
+    { "id": "angel", "fr": "Ange", "en": "Angel" },
+    { "id": "colibri", "fr": "Colibri", "en": "Colibri" },
+    { "id": "staff", "fr": "Staff", "en": "Staff" },
+    { "id": "admin", "fr": "Administrateur", "en": "Admin" }
   ]
 }

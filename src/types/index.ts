@@ -46,7 +46,7 @@ export interface VolunteerAssignment {
 
 export interface ResourcesData {
   people: Person[];
-  roles: string[];
+  roles: Role[];
 }
 
 export interface WorkshopsData {
@@ -55,4 +55,10 @@ export interface WorkshopsData {
 
 export interface VolunteersData {
   assignments: VolunteerAssignment[];
+}
+
+export interface Role {
+  id: string;
+  fr: string;
+  en: string;
 }

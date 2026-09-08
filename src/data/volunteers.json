@@ -4,28 +4,28 @@
       "id": "a1",
       "volunteerId": "2",
       "workshopId": "w1",
-      "role": "Translator",
+      "role": "translator",
       "status": "Confirmed"
     },
     {
       "id": "a2",
       "volunteerId": "4",
       "workshopId": "w2",
-      "role": "Helper",
+      "role": "helper",
       "status": "Pending"
     },
     {
       "id": "a3",
       "volunteerId": "2",
       "workshopId": "w3",
-      "role": "Helper",
+      "role": "helper",
       "status": "Confirmed"
     },
     {
       "id": "a4",
       "volunteerId": "4",
       "workshopId": "w4",
-      "role": "Helper",
+      "role": "helper",
       "status": "Confirmed"
     }
   ]
