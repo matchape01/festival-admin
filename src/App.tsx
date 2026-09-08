@@ -4,6 +4,7 @@ import { LoginModal } from './components/Auth/LoginModal';
 import { Header } from './components/Layout/Header';
 import { Sidebar } from './components/Layout/Sidebar';
 import { Dashboard } from './pages/Dashboard';
+import { Roles } from './pages/Roles';
 import { Resources } from './pages/Resources';
 import { Workshops } from './pages/Workshops';
 import { Planning } from './pages/Planning';
@@ -31,6 +32,7 @@ function App() {
             <div className="max-w-7xl mx-auto p-6">
               <Routes>
                 <Route path="/" element={<Dashboard />} />
+                <Route path="/roles" element={<Roles />} />
                 <Route path="/resources" element={<Resources />} />
                 <Route path="/workshops" element={<Workshops />} />
                 <Route path="/planning" element={<Planning />} />

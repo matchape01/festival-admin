@@ -2,11 +2,10 @@ import { useState } from 'react';
 import { useResources } from '../hooks/useData';
 import { Plus, Trash2, Edit, Download } from 'lucide-react';
 import { PersonForm } from '../components/Forms/PersonForm';
-import { RolesManager } from '../components/Resources/RolesManager';
 import { exportPeopleAsCSV, downloadCSV } from '../utils/csv';
 
 export function Resources() {
-  const { data, addPerson, updatePerson, deletePerson, addRole, updateRole, deleteRole } = useResources();
+  const { data, addPerson, updatePerson, deletePerson } = useResources();
   const [showForm, setShowForm] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
 
@@ -32,7 +31,7 @@ export function Resources() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Ressources</h1>
-          <p className="text-gray-600 mt-2">Gérez les personnes et les rôles du festival</p>
+          <p className="text-gray-600 mt-2">Gérez les personnes du festival</p>
         </div>
         <div className="flex gap-2">
           <button
@@ -56,15 +55,6 @@ export function Resources() {
             Ajouter une personne
           </button>
         </div>
-      </div>
-
-      <div className="bg-white rounded-lg shadow p-6">
-        <RolesManager
-          roles={data.roles}
-          onAddRole={addRole}
-          onUpdateRole={updateRole}
-          onDeleteRole={deleteRole}
-        />
       </div>
 
       {(showForm || editingPerson) && (
